@@ -21,7 +21,7 @@ next:
   - How to secure your deployment (i.e. SSL)
   - Address scaling strategies (don't actually document how to scale)
 
-- Installation guide / flow
+- Installation guide
   - /guide => /installation-overview
 
   - /install-rabbitmq
@@ -68,9 +68,9 @@ next:
     - how to secure your deployment
     - scaling strategies
 
+- Getting Started Guide
   - /getting-started
     - assumes sensu installation, shows how to start monitoring actual things
-
     - overview of sensu primitives / components (w/ 1-3 sentencese explaining what each of these things are)
       - checks
         - introduction to check results & events
@@ -125,6 +125,53 @@ next:
       - how to apply a mutator (new/updated handler example)
     - observe mutator results
 
+  - /getting-started-with-enterprise
+    - what are Enterprise "integrations"?
+      - links to sensuapp.org/enterprise#features
+      - they are just built-in handlers
+      - example integration configuration (e.g. slack?)
+
+  - /getting-started-summary
+    - what have we accomplished?
+
+- Reference Docs
+  - /clients
+    - merge /keepalives w/ /clients section
+    - external input stuff
+  - /checks
+  - /handlers
+  - /filters
+  - /mutators
+  - /extensions (Phase 2)
+  - /events (formerly /event-data)
+
+- API Docs
+  - /api/overview
+  - /api/aggregates
+  - /api/checks
+  - /api/clients
+  - /api/events
+  - /api/health
+  - /api/info
+  - /api/stashes
+
+- Sensu Enterprise
+  - /enterprise/overview
+    - what it is yo!
+    - SE _is_ Sensu Core - everything still applies
+    - what are the added features:
+      - Dashboard!
+      - Built-in handlers (i.e. "integrations")
+      - Built-in Filters
+      - Built-in Mutators
+      - Contact Routing
+      - Transports
+  - /enterprise/built-in-handlers (Integrations)
+  - /enterprise/built-in-filters
+  - /enterprise/built-in-mutators
+  - /enterprise/contact-routing
+  - /enterprise/transports
+  - /enterprise/dashboard
 
 # Guide {#guide}
 
