@@ -10,10 +10,10 @@ next:
 # TODO
 
 - Guide overview - explain what the installation guide is and isn't
-  - Can't be too opinionated 
+  - Can't be too opinionated
   - Installation guide is an introduction to Sensu; deploying to production is a separate process
 
-- Installation objectives - is there more than one? 
+- Installation objectives - is there more than one?
   - Install dependencies & config
   - Install sensu services (sensu-server, etc) & config
   - Install client(s) & config
@@ -21,7 +21,7 @@ next:
   - How to secure your deployment (i.e. SSL)
   - Address scaling strategies (don't actually document how to scale)
 
-- Installation guide / flow 
+- Installation guide / flow
   - /guide => /installation-overview
 
   - /install-rabbitmq
@@ -41,7 +41,7 @@ next:
 
   - /install-sensu
     - Sensu Core (server + api, etc)
-    - Sensu Enterprise 
+    - Sensu Enterprise
     - configure sensu
       - add an example check (provide brief explanation of checks, link to /checks)
     - start the sensu services
@@ -53,13 +53,13 @@ next:
     - start sensu-client
     - observe sensu-client activity (e.g. logs)
 
-  - /install-a-dashboard 
+  - /install-a-dashboard
     - explain that a dashboard is an optional component
     - installing Uchiwa or Sensu Enterprise Dashboard
     - refer to uchiwa docs for configuration
     - configure Sensu Enterprise Dashboard (if appropriate)
-    - start sensu-enterprise-dashboard 
-   
+    - start sensu-enterprise-dashboard
+
   - /installation-summary
     - what have we accomplished?
     - how monitor actual applications and services
@@ -68,20 +68,63 @@ next:
     - how to secure your deployment
     - scaling strategies
 
-  - /getting-started 
+  - /getting-started
     - assumes sensu installation, shows how to start monitoring actual things
-    - overview of sensu components:
+
+    - overview of sensu primitives / components (w/ 1-3 sentencese explaining what each of these things are)
       - checks
+        - introduction to check results & events
+          - checks generate results
+          - some check results generate events
       - filters
       - mutators
       - handlers
 
   - /getting-started-with-checks
+    - what it is yo!
+    - basic explanation of check plugins & dependencies
+    - example check plugin
+      - example code
+      - how/where to install
+    - example check definition
+      - example config
+      - how/where to install
+    - observe check results
 
-- checks
-- filters
-- mutators
-- handlers
+  - /getting-started-with-handlers
+    - what it is yo!
+      - hanlders by themselves offer basic funtionality;
+      - complex handler functionality is possible with filters & mutators (next)
+    - example handler plugin
+      - example code
+      - how/where to install
+    - example handler definition
+      - example config
+      - how/where to install
+    - observe handler results
+
+  - /getting-started-with-filters
+    - what it is yo!
+      - not mandatory; depends on handlers
+      - can be inclusive/exclusive
+    - example filter definitions
+      - example inclusive filter config
+      - example exclusive filter config
+      - how/where to install
+      - how to apply a filter (new/updated handler example)
+    - observe filter results
+
+  - /getting-started-with-mutators
+    - what it is yo!
+    - example mutator plugin
+      - example code
+      - how/where to install
+    - example mutator definition
+      - example config
+      - how/where to install
+      - how to apply a mutator (new/updated handler example)
+    - observe mutator results
+
 
 # Guide {#guide}
 
