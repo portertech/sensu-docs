@@ -7,10 +7,86 @@ next:
   text: "Adding a check"
 ---
 
+# TODO
+
+- Guide overview - explain what the installation guide is and isn't
+  - Can't be too opinionated 
+  - Installation guide is an introduction to Sensu; deploying to production is a separate process
+
+- Installation objectives - is there more than one? 
+  - Install dependencies & config
+  - Install sensu services (sensu-server, etc) & config
+  - Install client(s) & config
+  - Next steps: how to deploy Sensu in production
+  - How to secure your deployment (i.e. SSL)
+  - Address scaling strategies (don't actually document how to scale)
+
+- Installation guide / flow 
+  - /guide => /installation-overview
+
+  - /install-rabbitmq
+    - install rabbitmq
+    - configure rabbitmq (link to /rabbit reference docs?)
+    - start rabbitmq
+
+  - /install-redis
+    - install redis
+    - configure redis (link to /redis reference docs?)
+    - start redis
+
+  - /install-respositories
+    - Sensu Core
+    - Sensu Enterprise (if appropriate)
+    - apt-get update || yum update
+
+  - /install-sensu
+    - Sensu Core (server + api, etc)
+    - Sensu Enterprise 
+    - configure sensu
+      - add an example check (provide brief explanation of checks, link to /checks)
+    - start the sensu services
+    - observe sensu-server activity (e.g. logs)
+
+  - /install-sensu-client
+    - adding a machine
+    - configure sensu-client
+    - start sensu-client
+    - observe sensu-client activity (e.g. logs)
+
+  - /install-a-dashboard 
+    - explain that a dashboard is an optional component
+    - installing Uchiwa or Sensu Enterprise Dashboard
+    - refer to uchiwa docs for configuration
+    - configure Sensu Enterprise Dashboard (if appropriate)
+    - start sensu-enterprise-dashboard 
+   
+  - /installation-summary
+    - what have we accomplished?
+    - how monitor actual applications and services
+      - overview to explain the basic concepts of how to build comprehensive monitoring solution
+    - deploying sensu in production (i.e. is different than the installation guide)
+    - how to secure your deployment
+    - scaling strategies
+
+  - /getting-started 
+    - assumes sensu installation, shows how to start monitoring actual things
+    - overview of sensu components:
+      - checks
+      - filters
+      - mutators
+      - handlers
+
+  - /getting-started-with-checks
+
+- checks
+- filters
+- mutators
+- handlers
+
 # Guide {#guide}
 
 This guide provides instructions on how to manually install and
-configure Sensu and its dependencies on Linux.
+configure Sensu (and/or Sensu Enterprise) and its dependencies on Linux.
 
 Sensu is typically (and best!) deployed by a configuration management
 tool, such as Chef and Puppet.
